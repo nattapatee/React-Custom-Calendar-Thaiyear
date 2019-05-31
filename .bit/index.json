@@ -1,0 +1,58 @@
+[
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "calendar"
+    },
+    "isSymlink": false,
+    "hash": "fb174059ad3f82ada221511ac71fda174e78a60d"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "tooltip"
+    },
+    "isSymlink": false,
+    "hash": "78b0c0e61ac50108d6d6371437a8ce42516a7dfd"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "utils/dom-handler"
+    },
+    "isSymlink": false,
+    "hash": "97b9005dc83a8140df94911ab2030d21197944e9"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "button"
+    },
+    "isSymlink": false,
+    "hash": "029d4e5f4f796e321181a2b6153b45aa9fddac77"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "internal/utild"
+    },
+    "isSymlink": false,
+    "hash": "afb233a031ed18e0aa87202083fb5eb20409b349"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "inputtext"
+    },
+    "isSymlink": false,
+    "hash": "f0cf598fc0079fbbf8833c144071adacc920e62e"
+  },
+  {
+    "id": {
+      "scope": "primefaces.primereact",
+      "name": "keyfilter"
+    },
+    "isSymlink": false,
+    "hash": "97df1f5cd751613cf8edf80c97889540a736585a"
+  }
+]

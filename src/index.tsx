@@ -1,20 +1,23 @@
 import * as React from 'react'
 import { Component } from 'react'
 import { render } from 'react-dom'
+import { Popover, Button } from 'antd';
 // import './index.css'
 import { DateRange } from "react-date-range-thaiyear-custom";
 import "react-date-range-thaiyear-custom/dist/styles.css"; // main style file
 import "react-date-range-thaiyear-custom/dist/theme/default.css";
 declare let require: any;
-type State = { dateRange: any; textShowDate: string; styleCalendar: string };
+type State = { dateRange: any; textShowDate: string; styleCalendar: string ,visible: boolean};
 import { Moment } from "moment";
 import moment = require("moment");
 import "moment/locale/th";
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 
 class App extends Component<{}, State>  {
   constructor(props) {
     super(props);
     this.state = {
+      visible: false,
       dateRange: {
         selection: {
           startDate: new Date(),
@@ -23,7 +26,7 @@ class App extends Component<{}, State>  {
         }
       },
       textShowDate: "",
-      styleCalendar: "calendar-hide"
+      styleCalendar: "calendar-hide",
     };
   }
   public handleSelect = (date) => {
@@ -87,19 +90,31 @@ class App extends Component<{}, State>  {
       this.setState({ styleCalendar: "calendar-hide" });
     }
   };
+  private hide = () => {
+    this.setState({visible: false})
+  }
+  private handleVisibleChange = visible => {
+    this.setState({visible})
+  }
+  
   render() {
     const selectionRange = {
 			startDate: new Date(),
 			endDate: new Date(),
 			key: 'selection',
-		}
-    return (<DateRange
+    }
+    const content = (
+      <DateRange
       onClickCurrentYear={this.handleClickYear}
       onClickCurrentMonth={this.handleClickMonth}
       onChange={this.handleRangeChange.bind(this, "dateRange")}
       moveRangeOnFirstSelection={false}
       ranges={[this.state.dateRange.selection]}
-    />)
+    />
+    );
+    return ( <Popover content={content} trigger="click">
+    <Button>Click me</Button>
+  </Popover>)
   }
 }
 
